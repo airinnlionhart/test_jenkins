@@ -1,4 +1,5 @@
 pipeline {
+    
     agent { docker { image 'python' } }
     stages {
         stage('Build') {
@@ -12,6 +13,7 @@ pipeline {
                 // Run the tests
                 sh 'python test_calculator.py'
             }
+            
         }
     }
 }
